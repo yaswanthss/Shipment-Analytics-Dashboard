@@ -9,9 +9,11 @@ st.set_page_config(layout="wide")
 st.title("🚚 Shipment Analytics Dashboard")
 
 try:
-    # ==============================
-    # LOAD DATA
-    # ==============================
+    import os
+
+    st.write("Current directory:", os.getcwd())
+    st.write("Files available:", os.listdir())
+
     file_path = "shipments.xlsx"
 
     df = pd.read_excel(file_path)
